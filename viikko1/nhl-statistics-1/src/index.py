@@ -1,4 +1,4 @@
-from statistics_use import Statistics
+from statistics import Statistics
 from player_reader import PlayerReader
 
 def main():
