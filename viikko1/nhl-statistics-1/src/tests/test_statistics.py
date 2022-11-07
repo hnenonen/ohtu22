@@ -16,51 +16,50 @@ class PlayerReaderStub:
 
 class TestStatistics(unittest.TestCase):
     def setUp(self):
-        # annetaan Statistics-luokan oliolle "stub"-luokan olio
         self.statistics = Statistics(
             PlayerReaderStub()
         )
 
-    def test_search_nonexistent_player(self):
-        player = self.statistics.search("Matti")
+    def test_player_not_exist(self):
+        player = self.statistics.search("Heikki")
         self.assertIs(player, None)
 
-    def test_search_existing_player(self):
+    def test_player_exists(self):
         player = self.statistics.search("Semenko")
         self.assertEqual(
             player.name,
             "Semenko"
         )
 
-    def test_team(self):
+    def test_return_players_team(self):
         players = self.statistics.team("PIT")
         self.assertEqual(
             players[0].name,
             "Lemieux"
         )
 
-    def test_top1_noargs(self):
+    def test_return_top1(self):
         result = self.statistics.top(1)
         self.assertEqual(
             "Gretzky",
             result[0].name
         )
 
-    def test_top1_points(self):
+    def test_return_top1_points(self):
         result = self.statistics.top(1, SortBy.POINTS)
         self.assertEqual(
             "Gretzky",
             result[0].name
         )
 
-    def test_top1_assists(self):
+    def test_return_top1_assists(self):
         result = self.statistics.top(1, SortBy.ASSISTS)
         self.assertEqual(
             "Gretzky",
             result[0].name
         )
 
-    def test_top1_goals(self):
+    def test_return_top1_goals(self):
         result = self.statistics.top(1, SortBy.GOALS)
         self.assertEqual(
             "Lemieux",

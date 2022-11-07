@@ -51,10 +51,8 @@ class Statistics:
             key=key
         )
 
-        result = []
-        i = 0
-        while i <= how_many:
-            result.append(sorted_players[i])
-            i += 1
+        players = []
+        for i in range(0, how_many):
+            players.append(sorted_players[i])
 
-        return result
+        return players
