@@ -1,6 +1,5 @@
-from statistics import Statistics
+from statistics_use import Statistics
 from player_reader import PlayerReader
-
 
 def main():
     reader = PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2021-22/players.txt")
