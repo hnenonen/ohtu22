@@ -33,6 +33,32 @@ Register With Nonmatching Password And Password Confirmation
     Submit Credentials
     Register Should Fail With Message  Passwords must match
 
+Login After Successful Registration
+    Set Username  heikki
+    Set Password  heikki123
+    Set Password Confirmation  heikki123
+    Submit Credentials
+    Register Should Succeed
+    Go To Login Page
+    Set Username  heikki
+    Set Password  heikki123
+    Submit Login
+    Login Should Succeed
+
+
+Login After Failed Registration
+    Set Username  heikki
+    Set Password  heikki123
+    Set Password Confirmation  heikki1234
+    Submit Credentials
+    Register Should Fail With Message  Passwords must match
+    Go To Login Page
+    Set Username  heikki
+    Set Password  heikki123
+    Submit Login
+    Login Should Fail With Message  Invalid username or password
+
+
 *** Keywords ***
 Create User And Go To Register Page
     Create User  kalle  kalle123
