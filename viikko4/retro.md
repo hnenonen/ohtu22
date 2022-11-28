@@ -3,3 +3,4 @@ Siinä piirretään fläppitaululle ympärä, joka jaetaan 5 siivuun: aloita, lo
 Tämän tekniikan fokus on tiimin toimintatavojen kehittämisessä.
 Glad, Sad, Mad on myös retrospektiivitekniikka, mutta se keskittyy toimintatapoja laajemmin asioihin ja siihen on varattu enemmän aikaa, 60min. Jokainen kirjoittaa aluksi lapulle asioita, jotka tekevät surulliseksi, iloiseksi tai vihaiseksi. Tämän jälkeen nämä esitellään muille ja niistä yhdessä valitaan osa jatkokäsittelyyn. Näistä scrummarin johdolla keskustellaan tarkemmin ja ehdotetaan toimenpiteitä tehtäväksi.
 kommit1
+kommit2
